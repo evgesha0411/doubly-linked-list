@@ -75,14 +75,16 @@ class LinkedList {
 	
 	}
 
-    insertAt(index, data) 
-	{
-		var currentNode = this.current(index);
+   insertAt(index, data) 
+{
+	var currentNode = this.current(index);
 		
-		currentNode.data = data;
+	this.append(currentNode.data);
+			
+	currentNode.data = data;
 		
-		return this;
-	}
+	return this;
+}
 
     isEmpty() 
 	{
